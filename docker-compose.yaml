@@ -1,0 +1,22 @@
+version: "3.8"
+
+services: 
+    mantisbt:
+        image: xlrl/mantisbt:latest
+        ports:
+            - "8989:80"
+        volumes:
+             - ./config:/var/www/html/config
+             - ./custom:/var/www/html/custom
+        restart: always
+
+    mysql:
+        image: mariadb:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: bugtracker
+            MYSQL_USER: mantisbt
+            MYSQL_PASSWORD: mantisbt
+        volumes:
+            - ./mysql:/var/lib/mysql
+        restart: always
