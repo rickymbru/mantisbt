@@ -7,7 +7,8 @@ $g_db_password            = 'mantisbt';
 
 $g_default_timezone       = 'America/Sao_Paulo';
 
-$g_crypto_master_salt     = 'A8LCoB9oyFCR6CcR2NZ6KPW188RKXy8y3Hc6IEVSWJU=';
+#$g_crypto_master_salt     = 'A8LCoB9oyFCR6CcR2NZ6KPW188RKXy8y3Hc6IEVSWJU=';    # cdae5013
+$g_crypto_master_salt     = 'TSz7iz+PnvjS6pGpu9+cqgruKtj2Lze1IEl1jZ+vx0g=';	# docker-dev
 
 $g_enable_email_notification = ON;
 $g_phpMailer_method = PHPMAILER_METHOD_SMTP;
