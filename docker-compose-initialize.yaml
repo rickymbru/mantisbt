@@ -10,7 +10,7 @@ services:
     ports:
     - "8989:80"
     volumes:
-        - ./config:/var/www/html/config
+        #- ./config:/var/www/html/config
         - ./custom:/var/www/html/custom
     restart: always
 

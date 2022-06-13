@@ -4,6 +4,8 @@
 
 FROM php:8.0-apache
 
+LABEL maintainer="Ricky <rickymbru@gmail.com>"
+
 RUN a2enmod rewrite
 
 RUN set -xe \
