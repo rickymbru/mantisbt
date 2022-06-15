@@ -1,4 +1,5 @@
 <?php
+include('env.php');
 $g_hostname               = 'mysql';
 $g_db_type                = 'mysqli';
 $g_database_name          = 'bugtracker';
@@ -7,8 +8,7 @@ $g_db_password            = 'mantisbt';
 
 $g_default_timezone       = 'America/Sao_Paulo';
 
-$g_crypto_master_salt     = 'MetEnk2h2bP22/i+207nmS2nAs58DojAKSMbCii6Qac=';     #cdae5013
-#$g_crypto_master_salt     = 'TSz7iz+PnvjS6pGpu9+cqgruKtj2Lze1IEl1jZ+vx0g=';    # docker-dev
+$g_crypto_master_salt = crypto;
 
 $g_enable_email_notification = ON;
 $g_phpMailer_method = PHPMAILER_METHOD_SMTP;
