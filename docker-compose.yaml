@@ -10,8 +10,15 @@ services:
     ports:
     - "8989:80"
     volumes:
-        - ./config:/var/www/html/config
-        - ./custom:/var/www/html/custom
+        - ./html/config:/var/www/html/config
+        - ./html/custom:/var/www/html/custom
+        - ./html/images:/var/www/html/images
+        - ./html/core:/var/www/html/core        
+        - ./html/lang:/var/www/html/lang
+        - ./html/config_defaults_inc.php:/var/www/html/config_defaults_inc.php
+        - ./html/bug_update_page.php:/var/www/html/bug_update_page.php
+        - ./html/bug_view_page.php:/var/www/html/bug_view_page.php
+        - ./html/bug_view_inc.php:/var/www/html/bug_view_inc.php
     restart: always
 
   mysql:

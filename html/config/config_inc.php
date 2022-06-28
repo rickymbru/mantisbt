@@ -31,3 +31,12 @@ $g_ldap_protocol_version = 3;
 $g_ldap_follow_referrals = OFF;
 $g_ldap_uid_field = 'sAMAccountName';
 $g_ldap_use_starttls = OFF;
+
+$g_status_colors['requirements'] = '#5ba4cf';
+$g_status_colors['viability'] = '#515de9';
+$g_status_colors['datamart'] = '#7bc86c';
+$g_status_colors['cubolap'] = '#e1d162';
+$g_status_colors['dataviz'] = '#cd8de5';
+$g_status_colors['homologation'] = '#f5dd29';
+$g_status_colors['closed'] = '#04b52a';
+$g_status_colors['cancelled'] = '#df1616';
