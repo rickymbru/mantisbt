@@ -2,4 +2,5 @@
 /mysql
 env.php
 *.tar.gz
+/manstisbt
 #config_inc.php
