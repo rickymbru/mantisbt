@@ -14,7 +14,7 @@ services:
         - ./html/custom:/var/www/html/custom
         - ./html/images:/var/www/html/images
         - ./html/core:/var/www/html/core        
-        - ./html/lang:/var/www/html/lang
+        - ./html/lang:/var/www/html/lang/strings_portuguese_brazil.txt
         - ./html/config_defaults_inc.php:/var/www/html/config_defaults_inc.php
         - ./html/bug_update_page.php:/var/www/html/bug_update_page.php
         - ./html/bug_view_page.php:/var/www/html/bug_view_page.php
