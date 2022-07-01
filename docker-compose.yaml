@@ -18,7 +18,6 @@ services:
         - ./html/core/layout_api.php:/var/www/html/core/layout_api.php
         - ./html/lang/strings_portuguese_brazil.txt:/var/www/html/lang/strings_portuguese_brazil.txt
         - ./html/lang/strings_english.txt:/var/www/html/lang/strings_english.txt
-        - ./html/lang/strings_portuguese_standard.txt:/var/www/html/lang/strings_portuguese_standard.txt
         - ./html/bug_update_page.php:/var/www/html/bug_update_page.php
         - ./html/bug_view_page.php:/var/www/html/bug_view_page.php
         - ./html/bug_report_page.php:/var/www/html/bug_report_page.php
