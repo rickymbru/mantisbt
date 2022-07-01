@@ -15,18 +15,18 @@ services:
         - ./html/images/favicon_cedae.ico:/var/www/html/images/favicon_cedae.ico
         - ./html/core/config_api.php:/var/www/html/core/config_api.php
         - ./html/core/constant_inc.php:/var/www/html/core/constant_inc.php       
+        - ./html/core/layout_api.php:/var/www/html/core/layout_api.php
         - ./html/lang/strings_portuguese_brazil.txt:/var/www/html/lang/strings_portuguese_brazil.txt
         - ./html/lang/strings_english.txt:/var/www/html/lang/strings_english.txt
         - ./html/lang/strings_portuguese_standard.txt:/var/www/html/lang/strings_portuguese_standard.txt
-        - ./html/config_defaults_inc.php:/var/www/html/config_defaults_inc.php
         - ./html/bug_update_page.php:/var/www/html/bug_update_page.php
         - ./html/bug_view_page.php:/var/www/html/bug_view_page.php
+        - ./html/bug_report_page.php:/var/www/html/bug_report_page.php
         - ./html/bug_view_inc.php:/var/www/html/bug_view_inc.php
+        - ./html/bug_change_status_page.php:/var/www/html/bug_change_status_page.php
+        - ./html/config_defaults_inc.php:/var/www/html/config_defaults_inc.php
         - ./html/custom_constants_inc.php:/var/www/html/custom_constants_inc.php
         - ./html/custom_strings_inc.php:/var/www/html/custom_strings_inc.php
-        - ./html/bug_report_page.php:/var/www/html/bug_report_page.php
-        - ./html/bug_change_status_page.php:/var/www/html/bug_change_status_page.php
-        - ./html/core/layout_api.php:/var/www/html/core/layout_api.php
     restart: always
 
   mysql:
