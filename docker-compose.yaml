@@ -25,6 +25,8 @@ services:
         - ./html/custom_constants_inc.php:/var/www/html/custom_constants_inc.php
         - ./html/custom_strings_inc.php:/var/www/html/custom_strings_inc.php
         - ./html/bug_report_page.php:/var/www/html/bug_report_page.php
+        - ./html/bug_change_status_page.php:/var/www/html/bug_change_status_page.php
+        - ./html/core/layout_api.php:/var/www/html/core/layout_api.php
     restart: always
 
   mysql:
