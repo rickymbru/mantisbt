@@ -387,16 +387,25 @@ $s_email_updated = 'Endereço de email atualizado com sucesso';
 $s_realname_updated = 'Nome verdadeiro atualizado com sucesso';
 $s_password_updated = 'Senha atualizada com sucesso';
 $s_multiple_projects = 'As tarefas que você selecionou são de diferentes projetos. Os parâmetros abaixo refletem as configurações para todos os projetos. Se esta informação estiver incorreta, por favor, tente sua alteração com um número menor de tarefas selecionadas.';
+// titulos Dos status
 $s_new_bug_title = 'Nova Tarefa';
-$s_feedback_bug_title = 'Solicitar Retorno para a Tarefa';
-$s_acknowledged_bug_title = 'Admitir Tarefa';
-$s_confirmed_bug_title = 'Confirmar Tarefa';
-$s_assigned_bug_title = 'Atribuir Tarefa';
+$s_requirements_bug_title = "Requisitos";
+$s_viability_bug_title = "Viabilidade";
+$s_datamart_bug_title = "Datamart";
+$s_cubolap_bug_title = "Cubolap";
+$s_dataviz_bug_title = "Dataviz";
+$s_homologation_bug_title = "Homologação";
+$s_cancelled_bug_title = "Cancelar Tarefa";
+// botoes dos status
 $s_new_bug_button = 'Nova Tarefa';
-$s_feedback_bug_button = 'Solicitar Retorno';
-$s_acknowledged_bug_button = 'Admitir Tarefa';
-$s_confirmed_bug_button = 'Confirmar Tarefa';
-$s_assigned_bug_button = 'Atribuir Tarefa';
+$s_cancelled_bug_button = 'Confirmar';
+$s_requirements_bug_button = 'Confirmar';
+$s_viability_bug_button = 'Confirmar';
+$s_datamart_bug_button = 'Confirmar';
+$s_cubolap_bug_button = 'Confirmar';
+$s_dataviz_bug_button = 'Confirmar';
+$s_homologation_bug_button = 'Confirmar';
+// fim
 $s_bug_close_msg = 'A tarefa foi fechada...';
 $s_close_immediately = 'Fechar imediatamente:';
 $s_closed_bug_title = 'Fechar Tarefa';
