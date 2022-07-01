@@ -371,80 +371,13 @@ if( $t_show_attachments ) {
 		</td>
 	</tr>
 <?php } ?>
+
+<!-- selecionar perfil excluida -->
 <?php if( $t_show_platform || $t_show_os || $t_show_os_build ) { ?>
-	<tr>
-		<th class="category">
-			<label for="profile_id"><?php echo lang_get( 'select_profile' ) ?></label>
-		</th>
-		<td>
-			<?php if( count( profile_get_all_for_user( auth_get_current_user_id() ) ) > 0 ) { ?>
-				<select <?php echo helper_get_tab_index() ?> id="profile_id" name="profile_id" class="input-sm">
-					<?php print_profile_option_list( auth_get_current_user_id(), $f_profile_id ) ?>
-				</select>
-			<?php } ?>
-			<?php collapse_open( 'profile' ); ?>
-			<?php echo lang_get( 'or_fill_in' ); collapse_icon( 'profile' ); ?>
-			<table class="table-bordered table-condensed">
-				<tr>
-					<th class="category" width="30%">
-						<label for="platform"><?php echo lang_get( 'platform' ) ?></label>
-					</th>
-					<td>
-						<?php if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) { ?>
-						<select id="platform" name="platform" class="input-sm">
-							<option value=""></option>
-							<?php print_platform_option_list( $f_platform ); ?>
-						</select>
-						<?php
-							} else {
-								echo '<input type="text" id="platform" name="platform" class="typeahead input-sm" autocomplete = "off" size="32" maxlength="32" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $f_platform ) . '" />';
-							}
-						?>
-					</td>
-				</tr>
-				<tr>
-					<th class="category">
-						<label for="os"><?php echo lang_get( 'os' ) ?></label>
-					</th>
-					<td>
-						<?php if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) { ?>
-						<select id="os" name="os" class="input-sm">
-							<option value=""></option>
-							<?php print_os_option_list( $f_os ); ?>
-						</select>
-						<?php
-							} else {
-								echo '<input type="text" id="os" name="os" class="typeahead input-sm" autocomplete = "off" size="32" maxlength="32" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $f_os ) . '" />';
-							}
-						?>
-					</td>
-				</tr>
-				<tr>
-					<th class="category">
-						<label for="os_build"><?php echo lang_get( 'os_build' ) ?></label>
-					</th>
-					<td>
-						<?php
-							if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) {
-						?>
-						<select id="os_build" name="os_build" class="input-sm">
-							<option value=""></option>
-								<?php print_os_build_option_list( $f_os_build ); ?>
-							</select>
-						<?php
-							} else {
-								echo '<input type="text" id="os_build" name="os_build" class="typeahead input-sm" autocomplete = "off" size="16" maxlength="16" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $f_os_build ) . '" />';
-							}
-						?>
-					</td>
-				</tr>
-			</table>
-			<?php collapse_closed( 'profile' ); ?>
-			<?php echo lang_get( 'or_fill_in' ); collapse_icon( 'profile' ); ?>
-			<?php collapse_end( 'profile' ); ?>
-		</td>
-	</tr>
+	
 <?php } ?>
+<!-- e	xcluido -->
+
 <?php
 	if( $t_show_product_version ) {
 		$t_product_version_released_mask = VERSION_RELEASED;
