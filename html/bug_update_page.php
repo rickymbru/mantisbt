@@ -488,74 +488,74 @@ if( $t_show_projection || $t_show_eta ) {
 }
 
 #
-# Platform, OS, OS Version
+# Platform, OS, OS Version - Coluna SO para tirar esta aqui provavelmente
 #
 
 if( $t_show_platform || $t_show_os || $t_show_os_build ) {
-	echo '<tr>';
+	// echo '<tr>';
 
 	$t_spacer = 0;
 
-	if( $t_show_platform ) {
-		# Platform
-		echo '<th class="category"><label for="platform">' . lang_get( 'platform' ) . '</label></th>';
-		echo '<td>';
+	// if( $t_show_platform ) {
+	// 	# Platform
+	// 	echo '<th class="category"><label for="platform">' . lang_get( 'platform' ) . '</label></th>';
+	// 	echo '<td>';
 
-		if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) {
-			echo '<select ' . helper_get_tab_index() . ' id="platform" name="platform" class="input-sm"><option value=""></option>';
-			print_platform_option_list( $t_bug->platform );
-			echo '</select>';
-		} else {
-			echo '<input type="text" id="platform" name="platform" class="typeahead input-sm" autocomplete = "off" size="16" maxlength="32" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $t_bug->platform ) . '" />';
-		}
+	// 	if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) {
+	// 		echo '<select ' . helper_get_tab_index() . ' id="platform" name="platform" class="input-sm"><option value=""></option>';
+	// 		print_platform_option_list( $t_bug->platform );
+	// 		echo '</select>';
+	// 	} else {
+	// 		echo '<input type="text" id="platform" name="platform" class="typeahead input-sm" autocomplete = "off" size="16" maxlength="32" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $t_bug->platform ) . '" />';
+	// 	}
 
-		echo '</td>';
-	} else {
-		$t_spacer += 2;
-	}
+	// 	echo '</td>';
+	// } else {
+	// 	$t_spacer += 2;
+	// }
 
-	if( $t_show_os ) {
-		# Operating System
-		echo '<th class="category"><label for="os">' . lang_get( 'os' ) . '</label></th>';
-		echo '<td>';
+	// if( $t_show_os ) {
+	// 	# Operating System
+	// 	echo '<th class="category"><label for="os">' . lang_get( 'os' ) . '</label></th>';
+	// 	echo '<td>';
 
-		if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) {
-			echo '<select ' . helper_get_tab_index() . ' id="os" name="os" class="input-sm"><option value=""></option>';
-			print_os_option_list( $t_bug->os );
-			echo '</select>';
-		} else {
-			echo '<input type="text" id="os" name="os" class="typeahead input-sm" autocomplete = "off" size="16" maxlength="32" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $t_bug->os ) . '" />';
-		}
+	// 	if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) {
+	// 		echo '<select ' . helper_get_tab_index() . ' id="os" name="os" class="input-sm"><option value=""></option>';
+	// 		print_os_option_list( $t_bug->os );
+	// 		echo '</select>';
+	// 	} else {
+	// 		echo '<input type="text" id="os" name="os" class="typeahead input-sm" autocomplete = "off" size="16" maxlength="32" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $t_bug->os ) . '" />';
+	// 	}
 
-		echo '</td>';
-	} else {
-		$t_spacer += 2;
-	}
+	// 	echo '</td>';
+	// } else {
+	// 	$t_spacer += 2;
+	// }
 
-	if( $t_show_os_build ) {
-		# OS Version
-		echo '<th class="category"><label for="os_build">' . lang_get( 'os_build' ) . '</label></th>';
-		echo '<td>';
+	// if( $t_show_os_build ) {
+	// 	# OS Version
+	// 	echo '<th class="category"><label for="os_build">' . lang_get( 'os_build' ) . '</label></th>';
+	// 	echo '<td>';
 
-		if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) {
-			echo '<select ' . helper_get_tab_index() . ' id="os_build" name="os_build" class="input-sm"><option value=""></option>';
-			print_os_build_option_list( $t_bug->os_build );
-			echo '</select>';
-		} else {
-			echo '<input type="text" id="os_build" name="os_build" class="typeahead input-sm" autocomplete = "off" size="16" maxlength="16" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $t_bug->os_build ) . '" />';
-		}
+	// 	if( config_get( 'allow_freetext_in_profile_fields' ) == OFF ) {
+	// 		echo '<select ' . helper_get_tab_index() . ' id="os_build" name="os_build" class="input-sm"><option value=""></option>';
+	// 		print_os_build_option_list( $t_bug->os_build );
+	// 		echo '</select>';
+	// 	} else {
+	// 		echo '<input type="text" id="os_build" name="os_build" class="typeahead input-sm" autocomplete = "off" size="16" maxlength="16" tabindex="' . helper_get_tab_index_value() . '" value="' . string_attribute( $t_bug->os_build ) . '" />';
+	// 	}
 
-		echo '</td>';
-	} else {
-		$t_spacer += 2;
-	}
+	// 	echo '</td>';
+	// } else {
+	// 	$t_spacer += 2;
+	// }
 
-	# spacer
-	if( $t_spacer > 0 ) {
-		echo '<td colspan="', $t_spacer, '">&#160;</td>';
-	}
+	// # spacer
+	// if( $t_spacer > 0 ) {
+	// 	echo '<td colspan="', $t_spacer, '">&#160;</td>';
+	// }
 
-	echo '</tr>';
+	// echo '</tr>';
 }
 
 #
