@@ -250,6 +250,15 @@ $s_email_notification_title_for_status_bug_assigned = 'A seguinte tarefa foi ATR
 $s_email_notification_title_for_status_bug_resolved = 'A seguinte tarefa foi RESOLVIDA.';
 $s_email_notification_title_for_status_bug_closed = 'A seguinte tarefa foi FECHADA.';
 $s_email_notification_title_for_action_bug_submitted = 'A seguinte tarefa foi ENVIADA.';
+// novos status email
+$s_email_notification_title_for_status_bug_requirements = "A seguinte tarefa foi para REQUISITOS."; 
+$s_email_notification_title_for_status_bug_viability = "A seguinte tarefa foi para VIABILIDADE."; 
+$s_email_notification_title_for_status_bug_datamart = "A seguinte tarefa foi para DATAMART."; 
+$s_email_notification_title_for_status_bug_cubolap = "A seguinte tarefa foi para CUBOLAP."; 
+$s_email_notification_title_for_status_bug_dataviz = "A seguinte tarefa foi para DATAVIZ."; 
+$s_email_notification_title_for_status_bug_homologation = "A seguinte tarefa foi para HOMOLOGAÇÃO."; 
+// ======
+$s_email_notification_title_for_status_bug_cancelled = "A seguinte tarefa foi CANCELADA."; 
 $s_email_notification_title_for_action_bug_assigned = 'A seguinte tarefa foi ATRIBUÍDA.';
 $s_email_notification_title_for_action_bug_unassigned = 'A seguinte tarefa foi APAGADA.';
 $s_email_notification_title_for_action_bug_reopened = 'A seguinte tarefa foi REABERTA.';
