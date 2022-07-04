@@ -7,4 +7,6 @@
   define ( 'HOMOLOGATION', 71 ); // add DATAVIZ
   define ( 'CANCELLED', 101 );   // add cancelado
 
+  // definir novos estados
+  define ( 'TESTE' , 11); //TESTE PROJETO   
 ?>

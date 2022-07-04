@@ -1,7 +1,7 @@
 <?php
 if ( lang_get_current() == portuguese_brazil ) 
 {
-  $s_status_enum_string = '10:novo,21:requisitos,31:viabilidade,41:datamart,51:cubolap,61:dataviz,71:homologação,90:fechado,100:cancelado';
+  $s_status_enum_string = '10:novo,21:requisitos,31:viabilidade,41:datamart,51:cubolap,61:dataviz,71:homologaÃ§Ã£o,90:fechado,100:cancelado';
 } else {
   $s_status_enum_string = '10:new,21:requirements,31:viability,41:datamart,51:cubolap,61:dataviz,71:homologation,90:closed,100:cancelled';
   
