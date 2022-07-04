@@ -1,4 +1,6 @@
 .history
 /mysql
 env.php
+*.tar.gz
 #config_inc.php
+/mantisbt
