@@ -257,7 +257,7 @@ $s_email_notification_title_for_status_bug_datamart = "A seguinte tarefa foi par
 $s_email_notification_title_for_status_bug_cubolap = "A seguinte tarefa foi para CUBOLAP."; 
 $s_email_notification_title_for_status_bug_dataviz = "A seguinte tarefa foi para DATAVIZ."; 
 $s_email_notification_title_for_status_bug_homologation = "A seguinte tarefa foi para HOMOLOGAÇÃO."; 
-// ======
+// fim
 $s_email_notification_title_for_status_bug_cancelled = "A seguinte tarefa foi CANCELADA."; 
 $s_email_notification_title_for_action_bug_assigned = 'A seguinte tarefa foi ATRIBUÍDA.';
 $s_email_notification_title_for_action_bug_unassigned = 'A seguinte tarefa foi APAGADA.';

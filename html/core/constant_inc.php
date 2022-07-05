@@ -88,7 +88,7 @@ define( 'NOT_A_BUG', 70 );
 define( 'SUSPENDED', 80 );
 define( 'WONT_FIX', 90 );
 
-# priority
+# priority - PRIORIDADE
 define( 'NONE', 10 );
 define( 'LOW', 20 );
 define( 'NORMAL', 30 );
@@ -96,7 +96,7 @@ define( 'HIGH', 40 );
 define( 'URGENT', 50 );
 define( 'IMMEDIATE', 60 );
 
-# severity
+# severity - GRAVIDADE
 define( 'FEATURE', 10 );
 define( 'TRIVIAL', 20 );
 define( 'TEXT', 30 );
@@ -106,7 +106,7 @@ define( 'MAJOR', 60 );
 define( 'CRASH', 70 );
 define( 'BLOCK', 80 );
 
-# reproducibility
+# reproducibility - FREQUENCIA
 define( 'REPRODUCIBILITY_ALWAYS', 10 );
 define( 'REPRODUCIBILITY_SOMETIMES', 30 );
 define( 'REPRODUCIBILITY_RANDOM', 50 );

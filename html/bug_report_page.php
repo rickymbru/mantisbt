@@ -373,10 +373,13 @@ if( $t_show_attachments ) {
 <?php } ?>
 
 <!-- selecionar perfil excluida -->
-<?php if( $t_show_platform || $t_show_os || $t_show_os_build ) { ?>
+<?php if( $t_show_platform || $t_show_os || $t_show_os_build ) 
+{ ?>
 	
-<?php } ?>
-<!-- e	xcluido -->
+<?php 
+
+} ?>
+<!-- excluido -->
 
 <?php
 	if( $t_show_product_version ) {
@@ -416,9 +419,9 @@ if( $t_show_attachments ) {
 			<label for="handler_id"><?php echo lang_get( 'assign_to' ) ?></label>
 		</th>
 		<td>
-			<select <?php echo helper_get_tab_index() ?> id="handler_id" name="handler_id" class="input-sm">
+			<select <?php echo helper_get_tab_index() ?> id="handler_id" name="handler_id" class="input-sm"> 
 				<option value="0" selected="selected"></option>
-				<?php print_assign_to_option_list( $f_handler_id ) ?>
+				<?php print_assign_to_option_list( $f_handler_id )?>
 			</select>
 		</td>
 	</tr>
@@ -512,7 +515,7 @@ if( $t_show_attachments ) {
 	</tr>
 
 <?php if( $t_show_steps_to_reproduce ) { ?>
-		<tr>
+		<!-- <tr>
 			<th class="category">
 				<label for="steps_to_reproduce"><?php print_documentation_link( 'steps_to_reproduce' ) ?></label>
 			</th>
@@ -522,11 +525,11 @@ if( $t_show_attachments ) {
 <?php echo string_textarea( $f_steps_to_reproduce ) ?>
 </textarea>
 			</td>
-		</tr>
+		</tr> -->
 <?php } ?>
 
 <?php if( $t_show_additional_info ) { ?>
-	<tr>
+	<!-- <tr>
 		<th class="category">
 			<label for="additional_info"><?php print_documentation_link( 'additional_information' ) ?></label>
 		</th>
@@ -536,10 +539,10 @@ if( $t_show_attachments ) {
 <?php echo string_textarea( $f_additional_info ) ?>
 </textarea>
 		</td>
-	</tr>
+	</tr> -->
 <?php } ?>
 <?php if( $t_show_tags ) { ?>
-	<tr>
+	<!-- <tr>
 		<th class="category">
 			<label for="attach_tag"><?php echo lang_get( 'tag_attach_long' ) ?></label>
 		</th>
@@ -561,7 +564,7 @@ if( $t_show_attachments ) {
 				}
 			?>
 		</td>
-	</tr>
+	</tr> -->
 <?php
 	}
 
