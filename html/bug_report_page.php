@@ -292,7 +292,7 @@ if( $t_show_attachments ) {
 	if( $t_show_reproducibility ) {
 ?>
 
-	<tr>
+	<!-- <tr>
 		<th class="category">
 			<label for="reproducibility"><?php print_documentation_link( 'reproducibility' ) ?></label>
 		</th>
@@ -301,7 +301,7 @@ if( $t_show_attachments ) {
 				<?php print_enum_string_option_list( 'reproducibility', $f_reproducibility ) ?>
 			</select>
 		</td>
-	</tr>
+	</tr> -->
 <?php
 	}
 
