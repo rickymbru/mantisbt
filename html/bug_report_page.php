@@ -420,7 +420,7 @@ if( $t_show_attachments ) {
 		</th>
 		<td>
 			<select <?php echo helper_get_tab_index() ?> id="handler_id" name="handler_id" class="input-sm"> 
-				<option value="0" selected="selected"></option>
+				<option value="0" selected="selected">( Selecione )</option>
 				<?php print_assign_to_option_list( $f_handler_id )?>
 			</select>
 		</td>

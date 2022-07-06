@@ -26,6 +26,7 @@ services:
         - ./html/config_defaults_inc.php:/var/www/html/config_defaults_inc.php
         - ./html/custom_constants_inc.php:/var/www/html/custom_constants_inc.php
         - ./html/custom_strings_inc.php:/var/www/html/custom_strings_inc.php
+        - ./html/login_select_proj_page.php:/var/www/html/login_select_proj_page.php
     restart: always
 
   mysql:
