@@ -265,12 +265,17 @@ if( $t_show_attachments ) {
 ?>
 	<tr>
 		<th class="category" width="30%">
+		<label for="category_id"><?php print_documentation_link( 'category' ) ?></label>
+			<!-- 
 			<?php
-			echo $t_allow_no_category ? '' : '<span class="required">*</span> ';
+			/*
+			echo $t_allow_no_category;
 			echo '<label for="category_id">';
 			print_documentation_link( 'category' );
 			echo '</label>';
+			*/	
 			?>
+			-->
 		</th>
 		<td width="70%">
 			<?php if( $t_changed_project ) {
@@ -278,7 +283,7 @@ if( $t_show_attachments ) {
 			} ?>
 			<select id="category_id" name="category_id" class="autofocus input-sm" <?php
 				echo helper_get_tab_index();
-				echo $t_allow_no_category ? '' : ' required';
+				echo $t_allow_no_category;
 			?>>
 				<?php
 					print_category_option_list( $f_category_id );
@@ -292,16 +297,18 @@ if( $t_show_attachments ) {
 	if( $t_show_reproducibility ) {
 ?>
 
-	<!-- <tr>
+	<tr>
 		<th class="category">
 			<label for="reproducibility"><?php print_documentation_link( 'reproducibility' ) ?></label>
 		</th>
 		<td>
-			<select <?php echo helper_get_tab_index() ?> id="reproducibility" name="reproducibility" class="input-sm">
+			<select 
+				<?php echo helper_get_tab_index() ?> id="reproducibility" name="reproducibility" class="input-sm">
 				<?php print_enum_string_option_list( 'reproducibility', $f_reproducibility ) ?>
 			</select>
 		</td>
-	</tr> -->
+	</tr> 
+	
 <?php
 	}
 

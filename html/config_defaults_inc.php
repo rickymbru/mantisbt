@@ -551,8 +551,8 @@ $g_default_notify_flags = array(
 $g_notify_flags = array(
 	'new' => array(
 		'bugnotes'      => OFF,
-	),
-	'monitor' => array(
+	), 
+		'monitor' => array(
 		'reporter'      => OFF,
 		'handler'       => OFF,
 		'monitor'       => OFF,
@@ -2484,7 +2484,7 @@ $g_allow_delete_own_attachments = OFF;
  * Enable or disable usage of the ETA field.
  * @global integer $g_enable_eta
  */
-$g_enable_eta = OFF;
+$g_enable_eta = ON;
 
 /**
  * Enable or disable usage of the Projection field.
@@ -2547,9 +2547,10 @@ $g_bug_report_page_fields = array(
 	'category_id',
 	'due_date',
 	'handler',
-	'os',
-	'os_build',
-	'platform',
+	// RETIRADOS A PEDIDO DO ALEXANDRE
+	// 'os',
+	// 'os_build',
+	// 'platform',
 	'priority',
 	'product_build',
 	'product_version',
