@@ -1,0 +1,40 @@
+image:  docker
+
+services:
+    - docker:dind
+
+stages:
+    - build
+    - test
+    - deploy
+
+build:
+    stage: build
+    only:
+        - CI/CD
+    script:
+        - docker-compose down --remove-orphans
+        - docker-compose -f docker-compose-initialize.yaml up -d --build
+        
+test:
+    stage: test
+    only:
+        - test
+        - develop
+        - develop-test
+    script:
+        - echo "<?php define('crypto','$CRYPTO'); ?>" >./html/config/env.php
+        - docker-compose down
+        - docker-compose up -d        
+    environment: develop
+
+deploy:
+    stage: deploy
+    only:
+        - main
+    script:
+        - echo "<?php define('crypto','$CRYPTO'); ?>" >./html/config/env.php
+        - docker-compose down
+        - docker-compose up -d        
+    environment: production
+    when: manual
