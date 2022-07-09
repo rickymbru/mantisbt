@@ -1,0 +1,43 @@
+version: '3'
+
+services: 
+  mantisbt:
+    container_name: mantisbt
+    image: rickymbru/mantisbt:2.25.4
+    build:
+      context: .
+      dockerfile: ./docker/mantisbt/Dockerfile    
+    ports:
+    - "8989:80"
+    volumes:
+        #- ./config:/var/www/html/config
+        - ./custom:/var/www/html/custom
+    restart: always
+    networks:
+        - rede_mantis    
+
+  mysql:
+    container_name: mysql
+    image: mariadb:latest
+    build:
+      context: .
+      dockerfile: ./docker/mysql/Dockerfile        
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bugtracker
+      MYSQL_USER: mantisbt
+      MYSQL_PASSWORD: mantisbt
+    volumes:
+    - mysql-data:/var/lib/mysql
+    restart: always
+    networks:
+        - rede_mantis
+        
+networks:
+    rede_mantis:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.21.240.0/24
+volumes:
+  mysql-data:
