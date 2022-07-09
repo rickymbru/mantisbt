@@ -5,8 +5,8 @@ services:
     container_name: mantisbt
     image: rickymbru/mantisbt:2.25.4
     build:
-      context: ./docker/mantisbt
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: ./docker/mantisbt/Dockerfile    
     ports:
     - "8989:80"
     volumes:
@@ -26,14 +26,17 @@ services:
         - ./html/config_defaults_inc.php:/var/www/html/config_defaults_inc.php
         - ./html/custom_constants_inc.php:/var/www/html/custom_constants_inc.php
         - ./html/custom_strings_inc.php:/var/www/html/custom_strings_inc.php
+        - ./html/login_select_proj_page.php:/var/www/html/login_select_proj_page.php
     restart: always
+    networks:
+        - rede_mantis    
 
   mysql:
     container_name: mysql
     image: rickymbru/mariadb:latest
     build:
-      context: ./docker/mysql
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./docker/mysql/Dockerfile
     ports:
     - "3306:3306"      
     environment:
@@ -42,5 +45,16 @@ services:
       MYSQL_USER: mantisbt
       MYSQL_PASSWORD: mantisbt
     volumes:
-    - ./mysql:/var/lib/mysql
+    - mysql-data:/var/lib/mysql
     restart: always
+    networks:
+        - rede_mantis
+        
+networks:
+    rede_mantis:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.21.240.0/24
+volumes:
+  mysql-data:

@@ -265,12 +265,17 @@ if( $t_show_attachments ) {
 ?>
 	<tr>
 		<th class="category" width="30%">
+		<label for="category_id"><?php print_documentation_link( 'category' ) ?></label>
+			<!-- 
 			<?php
-			echo $t_allow_no_category ? '' : '<span class="required">*</span> ';
+			/*
+			echo $t_allow_no_category;
 			echo '<label for="category_id">';
 			print_documentation_link( 'category' );
 			echo '</label>';
+			*/	
 			?>
+			-->
 		</th>
 		<td width="70%">
 			<?php if( $t_changed_project ) {
@@ -278,7 +283,7 @@ if( $t_show_attachments ) {
 			} ?>
 			<select id="category_id" name="category_id" class="autofocus input-sm" <?php
 				echo helper_get_tab_index();
-				echo $t_allow_no_category ? '' : ' required';
+				echo $t_allow_no_category;
 			?>>
 				<?php
 					print_category_option_list( $f_category_id );
@@ -297,11 +302,13 @@ if( $t_show_attachments ) {
 			<label for="reproducibility"><?php print_documentation_link( 'reproducibility' ) ?></label>
 		</th>
 		<td>
-			<select <?php echo helper_get_tab_index() ?> id="reproducibility" name="reproducibility" class="input-sm">
+			<select 
+				<?php echo helper_get_tab_index() ?> id="reproducibility" name="reproducibility" class="input-sm">
 				<?php print_enum_string_option_list( 'reproducibility', $f_reproducibility ) ?>
 			</select>
 		</td>
-	</tr>
+	</tr> 
+	
 <?php
 	}
 
@@ -373,10 +380,13 @@ if( $t_show_attachments ) {
 <?php } ?>
 
 <!-- selecionar perfil excluida -->
-<?php if( $t_show_platform || $t_show_os || $t_show_os_build ) { ?>
+<?php if( $t_show_platform || $t_show_os || $t_show_os_build ) 
+{ ?>
 	
-<?php } ?>
-<!-- e	xcluido -->
+<?php 
+
+} ?>
+<!-- excluido -->
 
 <?php
 	if( $t_show_product_version ) {
@@ -416,9 +426,9 @@ if( $t_show_attachments ) {
 			<label for="handler_id"><?php echo lang_get( 'assign_to' ) ?></label>
 		</th>
 		<td>
-			<select <?php echo helper_get_tab_index() ?> id="handler_id" name="handler_id" class="input-sm">
-				<option value="0" selected="selected"></option>
-				<?php print_assign_to_option_list( $f_handler_id ) ?>
+			<select <?php echo helper_get_tab_index() ?> id="handler_id" name="handler_id" class="input-sm"> 
+				<option value="0" selected="selected">( Selecione )</option>
+				<?php print_assign_to_option_list( $f_handler_id )?>
 			</select>
 		</td>
 	</tr>
@@ -512,7 +522,7 @@ if( $t_show_attachments ) {
 	</tr>
 
 <?php if( $t_show_steps_to_reproduce ) { ?>
-		<tr>
+		<!-- <tr>
 			<th class="category">
 				<label for="steps_to_reproduce"><?php print_documentation_link( 'steps_to_reproduce' ) ?></label>
 			</th>
@@ -522,11 +532,11 @@ if( $t_show_attachments ) {
 <?php echo string_textarea( $f_steps_to_reproduce ) ?>
 </textarea>
 			</td>
-		</tr>
+		</tr> -->
 <?php } ?>
 
 <?php if( $t_show_additional_info ) { ?>
-	<tr>
+	<!-- <tr>
 		<th class="category">
 			<label for="additional_info"><?php print_documentation_link( 'additional_information' ) ?></label>
 		</th>
@@ -536,10 +546,10 @@ if( $t_show_attachments ) {
 <?php echo string_textarea( $f_additional_info ) ?>
 </textarea>
 		</td>
-	</tr>
+	</tr> -->
 <?php } ?>
 <?php if( $t_show_tags ) { ?>
-	<tr>
+	<!-- <tr>
 		<th class="category">
 			<label for="attach_tag"><?php echo lang_get( 'tag_attach_long' ) ?></label>
 		</th>
@@ -561,7 +571,7 @@ if( $t_show_attachments ) {
 				}
 			?>
 		</td>
-	</tr>
+	</tr> -->
 <?php
 	}
 

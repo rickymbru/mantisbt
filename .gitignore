@@ -4,3 +4,4 @@ env.php
 *.tar.gz
 #config_inc.php
 /mantisbt
+notas.md
